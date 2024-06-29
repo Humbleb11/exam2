@@ -33,7 +33,7 @@ public class HumController {
     public Result save(@RequestBody Hum hum){
         log.info("新增人员{}", hum);
         humService.save(hum);
-        return Result.success();
+        return Result.success(hum);
     }
     //删除人员
     @DeleteMapping("/{id}")
@@ -47,6 +47,7 @@ public class HumController {
     public Result update( @RequestBody Hum hum){
         log.info("修改人员{}",  hum);
         humService.update(hum);
-        return Result.success();
+        return Result.success(hum);
     }
+    //肚子疼
 }
